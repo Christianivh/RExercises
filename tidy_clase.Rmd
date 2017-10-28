@@ -84,7 +84,7 @@ weather3 <- weather2 %>%
 Eliminando las columnas, que no sirve
 ```{r}
 weather4 <- weather3 %>% 
-  select(-d)
+  select(-d, -id, -year)
 ```
 
 Agrupando, por elements
@@ -92,6 +92,23 @@ Agrupando, por elements
 weather5 <- weather4 %>% 
   spread(element, cases)
 ```
+
+Viendo la temperatura mas altas
+```{r grafico1}
+ggplot(weather5, aes(day, month)) + 
+  geom_tile(aes(fill = TMAX), colour = "white") + 
+  scale_fill_gradient(low = "white", high = "steelblue")
+
+```
+
+Viendo la temperatura minimas
+```{r grafico2}
+ggplot(weather5, aes(day, month)) + 
+  geom_tile(aes(fill = TMIN), colour = "white") + 
+  scale_fill_gradient(low = "white", high = "red")
+
+```
+
 
 ## Trabajando con el dataset de pew
 ```{r}
