@@ -10,7 +10,7 @@ Cargando la data
 who<- data.frame(tidyr::who)
 ```
 
-transformando las columnas, haciendo unpivot
+transformando las columnas, haciendo unpivot Pruebas con Johnny
 
 ``` r
 who1 <- who %>% 

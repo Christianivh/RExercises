@@ -23,7 +23,7 @@ who<- data.frame(tidyr::who)
 ```
 
 
-transformando las columnas, haciendo unpivot
+transformando las columnas, haciendo unpivot Pruebas con Johnny
 ```{r}
 who1 <- who %>% 
   gather(new_sp_m014:newrel_f65, key = "key", value = "cases", na.rm = TRUE)
